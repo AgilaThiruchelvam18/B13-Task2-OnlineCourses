@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rowdies:wght@300;400;700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        righteous: ["Righteous", "sans-serif"],
+                        saira: ["Saira", "sans-serif"],
+                        rowdies: ["Rowdies", "sans-serif"]
+                    },
+                    colors: {
+                        whiteBackground: '#FFFFFF',
+                        gridPara:'#324361',
+                        gridValue:'#4E596B'
+
+
+                    },
+                    backgroundImage: {
+                        'custom-gradient': 'linear-gradient(90deg, rgba(30,34,84,1) 0%, rgba(40,44,110,1) 25%, rgba(58,64,161,1) 50%, rgba(88,57,210,1) 75%, rgba(67,74,186,1) 100%, rgba(88,57,210,1) 100%)',
+                        'bottom-gradient': 'linear-gradient(90deg, rgba(42,4,97,1) 0%, rgba(81,7,186,1) 25%, rgba(64,6,148,1) 50%, rgba(75,7,173,1) 75%, rgba(86,8,199,1) 100%)',
+                        'middle-gradient': 'linear-gradient(90deg, rgba(4,1,108,1) 0%, rgba(65,20,179,1) 25%, rgba(39,12,149,1) 50%, rgba(56,17,169,1) 75%, rgba(74,22,189,1) 100%)',
+                        'searchButton': 'linear-gradient(90deg, rgba(48,35,178,1) 0%, rgba(68,48,188,1) 25%, rgba(87,61,197,1) 50%, rgba(107,73,207,1) 75%, rgba(127,86,217,1) 100%)',
+                        'grid-gradient': 'linear-gradient(90deg, rgba(217,236,255,1) 0%, rgba(222,238,255,1) 24%, rgba(228,239,255,1) 50%, rgba(234,241,255,1) 75%, rgba(240,243,255,1) 100%)',
+                    'learn-gradient':'linear-gradient(90deg, rgba(115,159,232,1) 0%, rgba(106,123,224,1) 25%, rgba(97,91,217,1) 50%, rgba(88,57,210,1) 75%, rgba(79,24,202,1) 100%)',
+                    'category-gradient':'linear-gradient(90deg, rgba(217,236,255,1) 0%, rgba(217,236,255,1) 25%, rgba(217,236,255,1) 50%, rgba(217,236,255,1) 75%, rgba(217,236,255,1) 100%)',
+                'footerBottom-gradient':'linear-gradient(90deg, rgba(3,81,174,1) 0%, rgba(51,77,182,1) 25%, rgba(84,74,187,1) 50%, rgba(125,70,194,1) 75%, rgba(165,66,200,1) 100%)',
+               'footerMenu-gradient':'linear-gradient(90deg, rgba(71,122,227,1) 0%, rgba(90,98,218,1) 25%, rgba(109,74,208,1) 50%, rgba(128,51,199,1) 75%, rgba(147,27,189,1) 100%)',
+            'subscribe-gradient':'linear-gradient(90deg, rgba(0,179,255,1) 0%, rgba(76,17,250,1) 25%, rgba(25,1,248,1) 50%, rgba(128,51,199,1) 75%, rgba(147,27,189,1) 100%)',
+            'testimonial-gradient':'linear-gradient(90deg, rgba(219,237,255,1) 0%, rgba(219,237,255,1) 25%, rgba(219,237,255,1) 50%, rgba(219,237,255,1) 75%, rgba(219,237,255,1) 100%)'
+        },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-gray-50">
+    <header class="container relative">
+        <nav class="bg-whiteBackground w-full">
+            <div class="w-11/12 mx-auto flex items-center justify-between">
+                <div class="mr-20"><img src="images/Askmeidentity 2.png" alt="logo"></div>
+                <div class="flex space-x-8 ml-56 font-righteous text-lg ">
+                    <p class="hover:underline decoration-2 decoration-blue-500">Home</p>
+                    <p class="hover:underline decoration-2 decoration-blue-500">About</p>
+                    <p class="hover:underline decoration-2 decoration-blue-500">Courses</p>
+                    <p class="hover:underline decoration-2 decoration-blue-500">Contact</p>
+                </div>
+                <div class="ml-24"><img src="images/Group 1.png"></div>
+                <div
+                    class="ml-8 text-lg font-saira text-neutral-600 hover:underline underline-offset-4 decoration-4 decoration-blue-500">
+                    <p class="underline">Login</p>
+                </div>
+                <div
+                    class="mr-12 bg-custom-gradient px-6 py-2 rounded-lg text-white text-lg font-saira hover:border-2 border-blue-500">
+                    <div class="hover:underline underline-offset-4 decoration-2 decoration-blue-500 ">SignUp</div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="container bg-middle-gradient w-full   ">
+            <div class="flex p-36  text-white  ">
+                <div class="max-w-xl font-righteous flex-col   z-20">
+                    <p class="text-lg tracking-widest  mb-2">Successful coaches are visionaries
+                    </p>
+                    <h6 class="text-6xl ">Good <span class="text-blue-700">coaching</span> is good teaching & nothing
+                        else.
+                    </h6>
+                    <div class="flex  my-12">
+                        <p class="text-base border-2 rounded px-4 py-2">View Courses</p>
+                        <p class="text-base   px-4 py-2 ml-4">Get Free Consultation</p>
+                    </div>
+                    <div class="flex justify-between items-center rounded-lg bg-whiteBackground   mr-52 py-2 px-2">
+                        <p class="text-sm   text-slate-600">What do you want
+                            to learn
+                            today?</p>
+                        <div class="text-base flex justify-between  rounded bg-searchButton py-2 px-2 "><img
+                                src="images/Icon (3).png">
+                            <p class="text-sm items-center">Search</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex  z-20">
+                    <div class="border-black  mt-8 mx-4 border-black"><img src="images/Group 1000014970.png" alt="bar">
+                    </div>
+                    <div class=" max-w-64 mt-8 font-righteous text-base border-black ">
+                        <h6>shyam</h6>
+                        <p>In a coaching role, you ask the questions and rely more on your
+                            staff, who become the experts, to provide the information.</p>
+                        <img src="images/4.9.png">
+                    </div>
+                </div>
+
+
+                <!-- <div class="absolute bottom-16"><img src="images/Group 1000014990.png"></div>  -->
+            </div>
+            <div class="ml-80 absolute bottom-40 left-72 w-56 h-56 z-30"><img src="images/Group 1000014990.png"
+                    alt="arch"></div>
+            <div class=" absolute top-0 bottom-0 right-0  flex  z-10">
+                <img src="images/Ellipse 8324.png">
+            </div>
+            <div class=" absolute bottom-40 top-32 right-28 flex z-30">
+                <img src="images/women.png">
+            </div>
+        </section>
+        <!-- <div class="absolute"><img src="images/Group 1000014990.png" alt="arch"></div>
+                <div class="absolute"><img src="images/Ellipse 8324.png" alt="ellipse"></div>
+                <div class="absolute"><img src="images/women.png" alt="women"></div>
+        </div> -->
+        <div class="bg-bottom-gradient border border-t-white w-full text-white ">
+            <div class="max-w-7xl px-28 flex mx-auto items-center space-x-24 p-8">
+                <div><img src="images/Link ⏵ brand6.png.png" alt="spotify"></div>
+                <div><img src="images/Link ⏵ brand1.png.png" alt="amazon"></div>
+                <div><img src="images/Link ⏵ brand6.png.png" alt="spotify"></div>
+                <div><img src="images/Link ⏵ brand3.png.png" alt="cisco"></div>
+                <div><img src="images/Link ⏵ brand5.png.png" alt="logitech"></div>
+                <div><img src="images/Link ⏵ brand1.png.png" alt="amazon"></div>
+            </div>
+        </div>
+    </header>
+    <section class="grid-gradient">
+
+        <div class="flex pt-24 justify-center">
+            <img class="pl-16 pr-8" src="images/Ellipse 118.png">
+            <div class="text-center pr-32">
+                <p class="text-4xl font-rowdies">Featured <span class="text-blue-500"> Course</span></p>
+                <p class="text-xl tracking-widest font-righteous pt-4">THE FEATURE COURSES FOR THE INVENTED OUR TEACHING PART</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-9 p-36">
+            <div class="shadow-lg rounded-3xl">
+                <img src="images/Mask group.png">
+              <div class="bg-whiteBackground font-saira p-6 rounded-3xl"><div class="flex justify-between">
+                    <p>1,957 Students</p>
+                    <p>01h 59m</p>
+                </div>
+                <div class="my-4">
+                    <p class="font-semibold text-xl gridPara">Motion Graphics: Create a Nice
+                        Typography Animation</p>
+                </div>
+                <div class="flex justify-between">
+                    <p class="font-semibold gridValue">Rs.499</p>
+                    <img src="images/9054263_bx_cart_alt_icon 1.png">
+                </div></div>  
+            </div>
+
+            <div class="shadow-lg rounded-3xl">
+                <img src="images/Mask group (1).png">
+               <div class="bg-whiteBackground font-saira p-6 rounded-3xl"> <div class="flex justify-between">
+                    <p>9,575 Students</p>
+                    <p>01h 59m</p>
+                </div>
+                <div class="my-4">
+                    <p class="font-semibold text-xl gridPara">Advance PHP knowledge with JS to
+                        make smart web</p>
+                </div>
+                <div class="flex justify-between">
+                    <p class="font-semibold gridValue">Rs.499</p>
+                    <img src="images/9054263_bx_cart_alt_icon 1.png">
+                </div></div>
+            </div>
+
+            <div class="shadow-lg rounded-3xl">
+                <img class="rounded" src="images/rocket-launch-laptop-flying-rocket-icon-business-startup-project-concept 1.png">
+              <div class="bg-whiteBackground font-saira p-6 rounded-3xl"><div class="flex justify-between">
+                    <p>2957 Students</p>
+                    <p>02h 49m</p>
+                </div>
+                <div class="my-4">
+                    <p class="font-semibold text-xl gridPara">Education Software and PHP and JS
+                        System Script</p>
+                </div>
+                <div class="flex justify-between">
+                    <p class="font-semibold gridValue">Rs.499</p>
+                    <img src="images/9054263_bx_cart_alt_icon 1.png">
+                </div></div>
+            </div>
+
+            <div class="shadow-lg rounded-3xl">
+                <img src="images/Mask group (2).png">
+               <div class="bg-whiteBackground font-saira p-6"><div class="flex justify-between">
+                    <p>5,457 Students</p>
+                    <p>01h 49m</p>
+                </div>
+                <div class="my-4">
+                    <p class="font-semibold text-xl gridPara">The Complete Financial Analyst
+                        Training & Investing</p>
+                </div>
+                <div class="flex justify-between">
+                    <p class="font-semibold gridValue">Rs.499</p>
+                    <img src="images/9054263_bx_cart_alt_icon 1.png">
+                </div></div>
+            </div>
+
+            <div class="shadow-lg rounded-3xl">
+                <img src="images/Mask group (3).png">
+               <div class="bg-whiteBackground font-saira p-6"> <div class="flex justify-between">
+                    <p>595 Students</p>
+                    <p>01h 49m</p>
+                </div>
+                <div class="my-4">
+                    <p class="font-semibold text-xl gridPara">Marketing 2023: Complete Guide To
+                        Instagram Growth</p>
+                </div>
+                <div class="flex justify-between">
+                    <p class="font-semibold gridValue">Rs.499</p>
+                    <img src="images/9054263_bx_cart_alt_icon 1.png">
+                </div></div>
+            </div>
+
+            <div class="shadow-lg rounded-3xl">
+                <img src="images/Mask group (4).png">
+               <div class="bg-whiteBackground font-saira p-6"><div class="flex justify-between">
+                    <p>458 Students</p>
+                    <p>03h 00m</p>
+                </div>
+                <div class="my-4">
+                    <p class="font-semibold text-xl gridPara">Learn 3D Modelling and Design
+                        for Beginners</p>
+                </div>
+                <div class="flex justify-between">
+                    <p class="font-semibold gridValue">Rs.499</p>
+                    <img src="images/9054263_bx_cart_alt_icon 1.png">
+                </div></div>
+            </div>
+           
+        </div>
+        <div class="w-full mb-36 ">
+            <div class="mx-auto w-32 p-1 text-white bg-searchButton items-center rounded ">Explore Courses</div>
+        </div>
+
+    </section>
+<section class="bg-learn-gradient text-white relative">
+    <div class=" text-center p-24 ">
+        <div class="max-w-lg mx-auto  mb-24">
+        <p class="text-3xl font-righteous ">Why <span class="text-blue-700">learn</span> with our courses?</p>
+        <p class="text-lg font-saira  mt-4">We are providing the best courses and top classes.And extradinery placement training.....</p>
+    </div>
+    <div class="flex justify-around max-w-6xl mx-auto">
+        <div class=" items-center">
+            <img class=" mx-auto mb-6" src="images/Vector (2).png">
+             <h6 class="text-xl mb-6" class="text-2xl">01. Learn</h6>
+                 <p class=" text-base" class="text-lg">Learn continually. There is always
+                “one more thing”to learn.</p>
+        </div>
+        <div class="ml-28 mr-28"><img src="images/Line 15.png"></div>
+        <div class=" ">
+            <img class=" mx-auto mb-6" src="images/Icon (4).png">
+            <h6 class="text-xl  mb-6"> 02. Graduate</h6>
+            <p class="text-base ">Be bold,be courageous,
+                be your best.</p>
+           
+        </div>
+        <div><img class="ml-20 mr-24" src="images/Line 15.png"></div>
+        <div class="">
+           <img class=" mx-auto mb-6" src="images/Icon (5).png">
+            <h6 class="text-xl mb-6">03. Work</h6>
+            <p class="text-base ">Great companies are built in
+                the office,with hard work put
+                in by team.</p>
+        </div>
+    </div>
+    <div class="absolute left-0 top-20"><img src="images/Group 1000014989.png"></div>
+</div>
+</section>
+<section class="bg-category-gradient font-righteous">
+<div class="pt-20 text-center">
+    <h6 class="text-4xl">Top <span class="text-blue-700">Categories</span></h6>
+    <p class="text-2xl">100+ unique online course list designs</p>
+</div>
+<div class="grid grid-cols-6 gap-5  p-32">
+    <div class="bg-whiteBackground text-center p-8 rounded-2xl">
+        <img class=mx-auto src="images/div.features-box-image.png">
+        <h6 class="text-2xl pt-8">Digtal
+            Marketing</h6>
+        <p class="text-lg pt-8">25 Courses</p>
+    </div>
+    <div  class="bg-whiteBackground text-center p-8 rounded-2xl">
+        <img class=mx-auto src="images/div.features-box-image (1).png">
+        <h6 class="text-2xl pt-8">Web
+            Development</h6>
+        <p class="text-lg pt-8">16 Courses</p>
+    </div>
+    <div  class="bg-whiteBackground text-center p-8 rounded-2xl">
+        <img src="images/div.features-box-image (2).png">
+        <h6 class="text-2xl pt-8">Art &
+            Humanities</h6>
+        <p class="text-lg pt-8">76 Courses</p>
+    </div>
+    <div  class="bg-whiteBackground text-center p-8 rounded-2xl">
+        <img src="images/div.features-box-image (3).png">
+        <h6 class="text-2xl pt-8">Personal
+            Development</h6>
+        <p class="text-lg pt-8">22 Courses</p>
+    </div>
+    <div  class="bg-whiteBackground text-center p-8 rounded-2xl">
+        <img src="images/div.features-box-image (4).png">
+        <h6 class="text-2xl pt-8">IT and
+            Software</h6>
+        <p class="text-lg pt-8">110 Courses</p>
+    </div>
+    <div  class="bg-whiteBackground text-center p-8 rounded-2xl">
+        <img src="images/div.features-box-image (5).png">
+        <h6 class="text-2xl pt-8">Graphic
+            Design</h6>
+        <p class="text-lg pt-8">85 Courses</p>
+    </div>
+</div>
+</section>
+<div class="relative m-32">
+    <div class="max-w-4xl mx-auto bg-subscribe-gradient relative rounded-lg p-10">
+    <img class="absolute top-3 left-3 right-5" src="images/images.png">
+  <div class="max-w-xs mx-auto font-righteous text-white">
+    <h6 class="text-2xl text-center">Subscribe For Get Update
+        Every New Courses</h6>
+        <p class="text-xs py-8 text-center">20k+ students daily learn with Eduvi.Subscribe for new courses.</p>
+        <div class="flex bg-whiteBackground justify-between bg-transparent  rounded-lg">
+        <div class="max-w-lg bg-transparent text-sm">Enter your email</div>
+        <div class="bg-blue-900 text-sm px-4 py-2">Subscribe</div>
+        <img class="absolute left-96 top-12" src="images/Polygon 8.png">
+    </div>  
+        </div>
+    </div>
+    <img class="absolute right-12 top-72"src="images/Polygon 7.png">
+   
+    <img class="absolute left-32 top-56" src="images/Polygon 8.png">
+    
+</div>
+<div class="max-w-5xl mx-auto relative">
+    <div class="p-20"><img class="absolute bottom-40 right-0" src="images/banner_right.png.png">
+    <img class="my-32" src="images/Rectangle 8691.png">
+</div>
+</div>
+<section class="bg-testimonial-gradient font-righteous relative">
+<div class="p-32">
+    <div class="flex ">
+        <div>
+<img src="images/Ellipse 1217.png">
+    </div>
+    <div class="max-w-lg mx-auto text-center">
+    <h6 class="text-3xl mb-4 text-blue-900">Testimonials</h6>
+    <p class="text-xl mb-16">What our student say about us</p>
+</div>
+</div>
+    <div class="max-w-5xl mx-auto grid grid-cols-3 max-w-5xl">
+        <div class="bg-whiteBackground">
+            <img src="images/th (1) 4.png">
+            <p>Such an amazing traniner and easily understand the entire 
+                syllabus, and the guidence will be super and good to the way of explaning.</p>
+                <img src="images/Group 1000014987.png">
+    
+        </div>
+        <div class="bg-whiteBackground">
+            <img src="images/th (1) 4.png">
+            <p>Such an amazing traniner and easily understand the entire 
+                syllabus, and the guidence will be super and good to the way of explaning.</p>
+                <img src="images/Group 1000014987.png">
+        </div>
+        <div class="bg-whiteBackground">
+            <img src="images/th (1) 4.png">
+            <p>Such an amazing traniner and easily understand the entire 
+                syllabus, and the guidence will be super and good to the way of explaning.</p>
+                <img src="images/Group 1000014987.png">
+        </div>
+    </div>
+    
+</div>
+</section>
+<section>
+    <div class=" p-10 bg-footerMenu-gradient flex justify-between">
+<div class="max-w-sm">
+    <h6 class="text-2xl font-righteous pb-8">Connect</h6>
+    <img src="images/Askmeidentity 1.png">
+    <p class="text-sm font-righteous pt-8">Sri Jagannath Nivas,8-1-164/345/A/1,
+        Pragati Colony, Mailardevpally, Nawab
+        Saheb Kunta, Hyd, 500005</p>
+</div>
+<div class="grid grid-cols-4 gap-6 font-righteous">
+<div>
+    <h6 class="text-2xl pb-4">classes</h6>
+    <p class="text-lg ">Classroom Courses</p>
+    <p class="text-lg">Virtual Classroom Courses</p>
+    <p class="text-lg">E-Learning Courses</p>
+    <p class="text-lg">Video Courses</p>
+    <p class="text-lg">Offline Courses</p>
+</div>
+<div>
+    <h6 class="text-2xl pb-4">Community</h6>
+    <p class="text-lg">Learners</p>
+    <p class="text-lg">Partners</p>
+    <p class="text-lg">Developers</p>
+    <p class="text-lg">Transactions</p>
+    <p class="text-lg">Blog</p>
+</div>
+<div>
+    <h6 class="text-2xl pb-4">Quick Links</h6>
+    <p class="text-lg">Home</p>
+    <p class="text-lg">Professional Education</p>
+    <p class="text-lg">Courses</p>
+    <p class="text-lg">Admissions</p>
+    <p class="text-lg">Testimonials</p>
+    <p class="text-lg">Programs</p>
+</div>
+<div>
+    <h6 class="text-2xl pb-4">More</h6>
+    <p class="text-lg">Press</p>
+    <p class="text-lg">Investors</p>
+    <p class="text-lg">Terms</p>
+    <p class="text-lg">Privacy</p>
+    <p class="text-lg">Help</p>
+    <p class="text-lg">Contact</p>
+</div>
+
+</div>
+    </div>
+<div class="bg-footerBottom-gradient w-full  py-4">
+    <div class=" max-w-lg space-x-5 flex mx-auto">
+    <div class="relative" >
+        <img src="images/Ellipse 1226.png">
+        <div class="absolute top-3 right-3"><img src="images/Instagram.png">
+    </div>
+</div> 
+    <div class="relative" >
+        <img src="images/Ellipse 1226.png">
+        <div class="absolute top-3 right-3">  <img src="images/WhatsApp.png">
+    </div>
+</div>
+    <div class="relative" >
+        <img src="images/Ellipse 1226.png">
+        <div class="absolute top-3 right-3">  <img src="images/Twitter.png">
+    </div>
+</div>
+    <div class="relative">
+        <img src="images/Ellipse 1226.png">
+        <div class="absolute top-3 right-3"> <img src="images/LinkedIn.png">
+    </div>
+</div>
+    <div class="relative" >
+   
+        <img src="images/Ellipse 1226.png">
+        <div class="absolute top-3 right-3">  <img src="images/YouTube.png">
+    </div>
+</div>
+</div>
+</div>
+<div class="bg-bottom-gradient text-white w-full"><div class="max-w-lg font-righteous font-sm mx-auto">Copyright @ 2023 askmeidentity. All Rights Reserved</div></div>
+</section>
+</body>
+
+</html>
