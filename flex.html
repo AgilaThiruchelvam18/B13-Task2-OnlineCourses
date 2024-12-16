@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      background-color: teal;
+      padding: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      /* max-width: 1000px; */
+    }
+
+    .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-icons img {
+      width: 24px;
+      height: 24px;
+    }
+
+    main {
+      flex: 1;
+      padding: 15px;
+      background-color: bisque;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem ;
+    }
+
+    .product-card {
+      flex: 1;
+      min-width: 200px;
+      background-color: cornsilk;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.48);
+
+    }
+
+    .product-image {
+      aspect-ratio: 1;
+      background: yellowgreen;
+      border-radius: 1px;
+      margin-bottom: 10px;
+    }
+
+    .product-title {
+      font-size: 25px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .product-desc {
+      color: black;
+      margin-bottom: 1px;
+    }
+
+    .price {
+      color: black;
+      font-weight: bold;
+    }
+
+    .add-to-cart {
+      background: blue;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">My Shop</div>
+      <div class="nav-icons">
+        <img src="https://placehold.co/20x20" alt="" />
+        <img src="https://placehold.co/20x20" alt="" />
+        <img src="https://placehold.co/20x20" alt="" />
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+        <div class="product-card">
+          <div class="product-image"></div>
+          <div class="product-title">Product 1</div>
+          <p class="product-desc">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+            molestias corrupti dolores, fugit voluptate quis optio esse
+            laudantium doloribus iste repellat repellendus ut! Delectus earum
+            rem ipsam animi eius pariatur.
+          </p>
+          <div class="product-footer">
+            <span class="price">Rs.599</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image"></div>
+          <div class="product-title">Product 1</div>
+          <p class="product-desc">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+            molestias corrupti dolores, fugit voluptate quis optio esse
+            laudantium doloribus iste repellat repellendus ut! Delectus earum
+            rem ipsam animi eius pariatur.
+          </p>
+          <div class="product-footer">
+            <span class="price">Rs.599</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image"></div>
+          <div class="product-title">Product 1</div>
+          <p class="product-desc">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+            molestias corrupti dolores, fugit voluptate quis optio esse
+            laudantium doloribus iste repellat repellendus ut! Delectus earum
+            rem ipsam animi eius pariatur.
+          </p>
+          <div class="product-footer">
+            <span class="price">Rs.599</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image"></div>
+          <div class="product-title">Product 1</div>
+          <p class="product-desc">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+            molestias corrupti dolores, fugit voluptate quis optio esse
+            laudantium doloribus iste repellat repellendus ut! Delectus earum
+            rem ipsam animi eius pariatur.
+          </p>
+          <div class="product-footer">
+            <span class="price">Rs.599</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image"></div>
+          <div class="product-title">Product 1</div>
+          <p class="product-desc">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+            molestias corrupti dolores, fugit voluptate quis optio esse
+            laudantium doloribus iste repellat repellendus ut! Delectus earum
+            rem ipsam animi eius pariatur.
+          </p>
+          <div class="product-footer">
+            <span class="price">Rs.599</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image"></div>
+          <div class="product-title">Product 1</div>
+          <p class="product-desc">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+            molestias corrupti dolores, fugit voluptate quis optio esse
+            laudantium doloribus iste repellat repellendus ut! Delectus earum
+            rem ipsam animi eius pariatur.
+          </p>
+          <div class="product-footer">
+            <span class="price">Rs.599</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image"></div>
+          <div class="product-title">Product 1</div>
+          <p class="product-desc">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+            molestias corrupti dolores, fugit voluptate quis optio esse
+            laudantium doloribus iste repellat repellendus ut! Delectus earum
+            rem ipsam animi eius pariatur.
+          </p>
+          <div class="product-footer">
+            <span class="price">Rs.599</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image"></div>
+          <div class="product-title">Product 1</div>
+          <p class="product-desc">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+            molestias corrupti dolores, fugit voluptate quis optio esse
+            laudantium doloribus iste repellat repellendus ut! Delectus earum
+            rem ipsam animi eius pariatur.
+          </p>
+          <div class="product-footer">
+            <span class="price">Rs.599</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image"></div>
+          <div class="product-title">Product 1</div>
+          <p class="product-desc">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+            molestias corrupti dolores, fugit voluptate quis optio esse
+            laudantium doloribus iste repellat repellendus ut! Delectus earum
+            rem ipsam animi eius pariatur.
+          </p>
+          <div class="product-footer">
+            <span class="price">Rs.599</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+  </main>
+</body>
+
+</html>

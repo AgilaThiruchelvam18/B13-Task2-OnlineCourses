@@ -1,0 +1,162 @@
+<html>
+    <head><title>Spacestation</title></head>
+    <body>
+        <script>
+        const spaceStation = {
+            name: "Galactic Voyager",
+            purpose: "Interstellar research and exploration",
+            modules: [
+              {
+                name: "Command Center",
+                type: "operations",
+                equipment: ["radar", "communication panel", "navigation system"],
+                crew: [
+                  { name: "Captain Nova", role: "Commander", experience: 10 },
+                  { name: "Officer Vega", role: "Navigator", experience: 5 },
+                ],
+              },
+              {
+                name: "Research Lab",
+                type: "science",
+                equipment: ["microscope", "spectrometer", "sample container"],
+                crew: [
+                  { name: "Dr. Orion", role: "Scientist", experience: 8 },
+                  { name: "Dr. Lyra", role: "Biologist", experience: 6 },
+                ],
+              },
+              {
+                name: "Engineering Bay",
+                type: "maintenance",
+                equipment: ["wrench", "repair kit", "3D printer"],
+                crew: [
+                  { name: "Engineer Polaris", role: "Engineer", experience: 7 },
+                ],
+              },
+            ],
+          };
+          
+          // Get All Module Names
+          //Use map() to list all module names.
+          
+          
+          const moduleNames = spaceStation.modules.map((module) => module.name);
+          
+          console.log("Module Names:", moduleNames);
+          // Output: ["Command Center", "Research Lab", "Engineering Bay"]
+          //Count All Pieces of Equipment
+          //Use reduce() and flatMap() to find the total number of equipment items in the station.
+          
+          
+          const totalEquipment = spaceStation.modules
+            .flatMap((module) => module.equipment)
+            .length;
+          
+          console.log("Total Equipment:", totalEquipment); 
+          // Output: 9
+          // Find Modules of a Specific Type
+          //Use filter() to find modules of type science.
+          
+          
+          const scienceModules = spaceStation.modules.filter((module) => module.type === "science");
+          
+          console.log("Science Modules:", scienceModules.map((module) => module.name));
+          // Output: ["Research Lab"]
+          //List All Crew Members
+          //Use flatMap() to list all crew members with their roles.
+          
+          const crewMembers = spaceStation.modules.flatMap((module) =>
+            module.crew.map((member) => `${member.name} (${member.role})`)
+          );
+          
+          console.log("Crew Members:", crewMembers);
+          /*
+          Output:
+          [
+            "Captain Nova (Commander)",
+            "Officer Vega (Navigator)",
+            "Dr. Orion (Scientist)",
+            "Dr. Lyra (Biologist)",
+            "Engineer Polaris (Engineer)"
+          ]
+          */
+          //Find the Most Experienced Crew Member
+          //Use reduce() to determine the crew member with the highest experience.
+          
+          
+          const mostExperienced = spaceStation.modules
+            .flatMap((module) => module.crew)
+            .reduce((max, current) => (current.experience > max.experience ? current : max));
+          
+          console.log("Most Experienced:", mostExperienced);
+          // Output: { name: "Captain Nova", role: "Commander", experience: 10 }
+          //Check if Any Module Contains a Specific Equipment
+          //Use some() to check if any module contains a specific equipment item (e.g., "3D printer").
+          
+          
+          const has3DPrinter = spaceStation.modules.some((module) =>
+            module.equipment.includes("3D printer")
+          );
+          
+          console.log("Has 3D Printer:", has3DPrinter);
+          // Output: true
+          //Calculate Total Crew Experience
+          //Use reduce() to calculate the total experience of all crew members.
+          
+          
+          const totalExperience = spaceStation.modules.reduce((sum, module) => {
+            return sum + module.crew.reduce((crewSum, member) => crewSum + member.experience, 0);
+          }, 0);
+          
+          console.log("Total Crew Experience:", totalExperience);
+          // Output: 36
+          //Group Modules by Type
+          //Use reduce() to group modules into categories based on their type.
+          
+          
+          const modulesByType = spaceStation.modules.reduce((groups, module) => {
+            if (!groups[module.type]) {
+              groups[module.type] = [];
+            }
+            groups[module.type].push(module.name);
+            return groups;
+          }, {});
+          
+          console.log("Modules by Type:", modulesByType);
+          /*
+          Output:
+          {
+            operations: ["Command Center"],
+            science: ["Research Lab"],
+            maintenance: ["Engineering Bay"]
+          }
+          */
+          //Find Crew Members With Experience Over a Certain Number
+          //Use filter() and flatMap() to list crew members with more than 6 years of experience.
+          
+          
+          const experiencedCrew = spaceStation.modules
+            .flatMap((module) => module.crew)
+            .filter((member) => member.experience > 6);
+          
+          console.log("Experienced Crew:", experiencedCrew);
+          /*
+          Output:
+          [
+            { name: "Captain Nova", role: "Commander", experience: 10 },
+            { name: "Engineer Polaris", role: "Engineer", experience: 7 }
+          ]
+          */
+          //Get a List of Equipment for a Specific Module
+          //Write a function to retrieve equipment for a given module name.
+          
+          
+          function getEquipmentByModule(moduleName) {
+            const module = spaceStation.modules.find((mod) => mod.name === moduleName);
+            return module ? module.equipment : [];
+          }
+          
+          console.log("Equipment in Research Lab:", getEquipmentByModule("Research Lab"));
+          // Output: ["microscope", "spectrometer", "sample container"]
+        </script>
+    </body>
+</html>
