@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Array Property
+
+      // Array Method
+      // myArray
+
+      //   for (var i = 0; i < 10; i++) {
+      //     console.log(i);
+      //   }
+
+      // Aray Methods
+      var myArray = [2, 4, 6, 8, 10];
+      // I want to Square all these number and
+      // return a new Array;
+      console.log(myArray.length);
+
+      // Loop
+      var mySquareArray = [];
+      // No Return
+      myArray.forEach(function (a) {
+        mySquareArray.push(a * a);
+      });
+
+      console.log(myArray);
+      console.log(mySquareArray);
+
+      var odd = [1, 3, 5, 7];
+      // Add 1 to each number in the array
+
+        // var even = odd.map(function(o){
+        //   return o + 1
+        // });
+
+      var even = odd.map((o) => o + 1);
+
+
+      var values = [1,2,3,4,5,6,7,8,9,10]
+      // Filter all the Even Numbers
+
+      var f = values.filter(v => v % 2 === 0)
+
+      console.log(f)
+
+
+    //   console.log(odd);
+    //   console.log(even);
+
+      // Variable Names
+      // user-name
+      // 1username
+      // 1user name
+
+      // camel case -> userNameArray
+      // snake case -> user_name_array
+      // pascal case -> UserNameArray
+    </script>
+  </body>
+</html>
