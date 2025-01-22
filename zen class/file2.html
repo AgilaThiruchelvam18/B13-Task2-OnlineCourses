@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div class="max-w-2xl mx-auto">
+      <div class="bg-white rounded-lg shadow-md p-6 mb-4">
+        <form onsubmit="postData(); return false;">
+          <div class="flex gap-4 mb-4">
+            <div class="flex-1">
+              <label class="block text-sm font-medium text-gray-700"
+                >Name</label>
+              <input
+                type="text"
+                id="name"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div class="flex-1">
+              <label class="block text-sm font-medium text-gray-700"
+                >Email</label
+              >
+              <input
+                type="text"
+                id="email"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+          <div class="flex gap-4 mb-4">
+            <div class="flex-1">
+              <label class="block text-sm font-medium text-gray-700"
+                >Country</label
+              >
+              <select
+                name="country"
+                id="country"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="IN">India</option>
+                <option value="US">US</option>
+              </select>
+            </div>
+            <div class="flex-1">
+              <label class="block text-sm font-medium text-gray-700"
+                >State</label
+              >
+              <select
+                name="state"
+                id="state"
+                class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="TN">Tamil Nadu</option>
+                <option value="KL">Kerla</option>
+                <option value="NY">Newyork</option>
+                <option value="SE">Seatle</option>
+              </select>
+            </div>
+            <div class="flex-1">
+              <label class="block text-sm font-medium text-gray-700"
+                >City</label
+              >
+              <select
+                name="city"
+                id="city"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="CH">Chennai</option>
+                <option value="CO">Covai</option>
+                <option value="NJ">New Jersy</option>
+                <option value="WA">Washington</option>
+              </select>
+            </div>
+          </div>
+          <button
+            class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            Save
+          </button>
+        </form>
+      </div>
+      <div id="content">
+        
+      </div>
+    </div>
+
+    <script src="file1.js"></script>
+  </body>
+</html>
